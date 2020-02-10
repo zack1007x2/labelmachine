@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+    <RelativeLayout
+        android:id="@+id/rl_head_declare_title_separate_bottle_speed"
+        android:layout_width="match_parent"
+        app:layout_heightPercent="33.33%" >
+
+        <TextView
+            android:id="@+id/tv_head_declare_title_separate_bottle_speed"
+            style="@style/table_declare_title_textview_title"
+            android:text="@string/system_setting_head_declare_title_bottle_separate_speed" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_separate_motion_delay"
+        android:layout_width="match_parent"
+        android:layout_below="@id/rl_head_declare_title_separate_bottle_speed"
+        app:layout_heightPercent="33.33%" >
+
+        <TextView
+            android:id="@+id/tv_separate_motion_delay"
+            style="@style/table_item_textview_title"
+            android:text="@string/system_setting_item_title_bot_separate_enable" />
+
+        <ToggleButton
+            android:id="@+id/toggle_separate_motion_delay"
+            style="@style/table_item_toggle_normal"
+            android:layout_alignBaseline="@+id/tv_separate_motion_delay"
+            android:layout_toEndOf="@+id/tv_separate_motion_delay"
+            android:layout_toRightOf="@+id/tv_separate_motion_delay"
+            android:textOn="@string/common_switch_en_on"
+            android:textOff="@string/common_switch_en_off"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_separate_reset_delay"
+        android:layout_width="match_parent"
+        android:layout_below="@id/rl_separate_motion_delay"
+        app:layout_heightPercent="33.33%" >
+
+        <TextView
+            android:id="@+id/tv_separate_reset_delay"
+            style="@style/table_item_textview_title"
+            android:text="@string/system_setting_item_title_bot_sepa_set_spd" />
+
+        <EditText
+            android:id="@+id/et_separate_reset_delay"
+            style="@style/table_item_edittext_normal"
+            android:layout_alignBaseline="@+id/tv_separate_reset_delay"
+            android:layout_toEndOf="@+id/tv_separate_reset_delay"
+            android:layout_toRightOf="@+id/tv_separate_reset_delay"
+            android:inputType="number"
+             />
+    </RelativeLayout>
+
+
+</android.support.percent.PercentRelativeLayout>

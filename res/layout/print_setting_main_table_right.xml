@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_head_declare_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="20%" >
+
+        <TextView
+            android:id="@+id/tv_head_declare_title"
+            style="@style/table_declare_title_textview_title"
+            android:text="@string/print_setting_head_declare_title_right"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout 
+        android:id="@+id/rl_print_function"
+        android:layout_below="@id/rl_head_declare_title"
+        style="@style/tag_setting_main_table_item_layout"
+        app:layout_heightPercent="14%"  >
+
+        <TextView
+            android:id="@+id/tv_title_print_function"
+            style="@style/table_item_textview_title"
+            android:text="@string/print_setting_title_check_print_function" />
+
+        <Button
+            android:id="@+id/btn_print_function"
+            style="@style/table_item_btn"
+            android:layout_toEndOf="@+id/tv_title_print_function"
+            android:layout_toRightOf="@+id/tv_title_print_function"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout 
+        android:id="@+id/rl_print_option"
+        android:layout_below="@id/rl_print_function"
+        style="@style/tag_setting_main_table_item_layout"
+        app:layout_heightPercent="14%"  >
+
+        <TextView
+            android:id="@+id/tv_title_print_option"
+            style="@style/table_item_textview_title"
+            android:text="@string/print_setting_title_check_print_option" />
+
+        <Button
+            android:id="@+id/btn_print_option"
+            style="@style/table_item_btn"
+            android:background="@drawable/common_button_selector"
+            android:layout_toEndOf="@+id/tv_title_print_option"
+            android:layout_toRightOf="@+id/tv_title_print_option"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout  
+        android:id="@+id/rl_printer_stop_amount"
+        android:layout_below="@id/rl_print_option"
+        style="@style/tag_setting_main_table_item_layout"
+        app:layout_heightPercent="14%"  >
+
+        <TextView
+            android:id="@+id/tv_title_printer_stop_amount"
+            style="@style/table_item_textview_title"
+            android:layout_height="wrap_content"
+            android:text="@string/print_setting_title_check_printer_stop_amount" />
+
+        <EditText
+            android:id="@+id/et_title_printer_stop_amount"
+            style="@style/table_item_edittext_normal"
+            android:layout_toEndOf="@+id/tv_title_printer_stop_amount"
+            android:layout_toRightOf="@+id/tv_title_printer_stop_amount"
+            android:inputType="number"
+             />
+    </RelativeLayout>
+
+
+</android.support.percent.PercentRelativeLayout>

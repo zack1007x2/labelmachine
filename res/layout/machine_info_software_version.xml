@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_white"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_head_declare_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="12.5%" >
+
+        <TextView
+            android:id="@+id/tv_head_declare_title"
+            style="@style/engineer_table_declare_title_textview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/machine_ver_info_head_declare_title_software_version" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_app"
+        style="@style/tag_setting_main_table_item_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_head_declare_title"
+        app:layout_heightPercent="12.5%" >
+
+        <TextView
+            android:id="@+id/tv_title_app"
+            style="@style/table_item_textview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/machine_ver_info_title_app" />
+
+        <TextView
+            android:id="@+id/tv_content_app"
+            style="@style/version_info_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_gateway"
+        style="@style/tag_setting_main_table_item_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_app"
+        app:layout_heightPercent="12.5%" >
+
+        <TextView
+            android:id="@+id/tv_title_gateway"
+            style="@style/table_item_textview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/machine_ver_info_title_gateway" />
+        
+        <TextView
+            android:id="@+id/tv_content_gateway"
+            style="@style/version_info_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    
+     <RelativeLayout
+         android:id="@+id/rl_master"
+         style="@style/tag_setting_main_table_item_layout"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/rl_gateway"
+         app:layout_heightPercent="12.5%" >
+
+        <TextView
+            android:id="@+id/tv_title_master"
+            style="@style/table_item_textview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/machine_ver_info_title_master" />
+        
+        <TextView
+            android:id="@+id/tv_content_master"
+            style="@style/version_info_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_slave1"
+        style="@style/tag_setting_main_table_item_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_master"
+        app:layout_heightPercent="12.5%" >
+
+        <TextView
+            android:id="@+id/tv_title_slave1"
+            style="@style/table_item_textview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/machine_ver_info_title_slave1" />
+        
+        <TextView
+            android:id="@+id/tv_content_slave1"
+            style="@style/version_info_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_slave2"
+        style="@style/tag_setting_main_table_item_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_slave1"
+        app:layout_heightPercent="12.5%" >
+
+        <TextView
+            android:id="@+id/tv_title_slave2"
+            style="@style/table_item_textview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/machine_ver_info_title_slave2" />
+        
+        <TextView
+            android:id="@+id/tv_content_slave2"
+            style="@style/version_info_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    
+    <android.support.percent.PercentRelativeLayout 
+        android:id="@+id/rl_updatesoftware"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@id/rl_slave2"
+        app:layout_heightPercent="12.5%"  
+         >
+		<LinearLayout 
+            android:id="@+id/ll_update_center"
+            android:layout_height="match_parent"
+            android:layout_width="@dimen/size_10"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            ></LinearLayout>
+        <Button
+            android:id="@+id/btn_update_faremware"
+            style="@style/machine_and_ver_update_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/ll_update_center"
+            android:layout_toStartOf="@id/ll_update_center"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_10"
+            android:layout_marginStart="@dimen/size_10"
+            app:layout_heightPercent="70%"
+            app:layout_widthPercent="50%"
+            android:text="@string/machine_ver_info_title_update_firmware"
+             />
+        
+
+         <Button
+             android:id="@+id/btn_update_app"
+             style="@style/machine_and_ver_update_btn"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             app:layout_heightPercent="70%"
+             app:layout_widthPercent="50%"
+             android:layout_toRightOf="@id/ll_update_center"
+             android:layout_toEndOf="@id/ll_update_center"
+             android:layout_marginRight="@dimen/size_10"
+             android:layout_marginEnd="@dimen/size_10"
+             android:text="@string/machine_ver_info_title_update_app" />
+        
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout 
+        android:id="@+id/rl_read_ver"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@id/rl_updatesoftware"
+        app:layout_heightPercent="12.5%"  
+        >
+
+        <Button 
+            android:id="@+id/btn_read_software_ver"
+            app:layout_widthPercent="60%"
+            app:layout_heightPercent="70%"
+            android:layout_centerVertical="true"
+            android:text="@string/machine_ver_info_title_read_software_version"
+            style="@style/machine_and_ver_btn"
+            />
+        
+    </android.support.percent.PercentRelativeLayout>
+
+</android.support.percent.PercentRelativeLayout>

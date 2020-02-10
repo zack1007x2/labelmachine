@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/size_40"
+    android:background="@android:color/white" >
+
+    <RelativeLayout
+        android:id="@+id/RLHeader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_50"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip" >
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/machine_ver_info_dialog_title_select_machine_type"
+            android:textColor="@color/color_dialog_title_text_green"
+            android:layout_marginLeft="@dimen/size_20"
+            android:layout_marginStart="@dimen/size_20"
+            android:textSize="@dimen/text_size_s" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/title_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"
+        android:layout_below="@id/RLHeader"
+        android:background="@color/color_dialog_title_text_green" >
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_divider"
+        android:orientation="vertical" 
+        >
+
+        <RelativeLayout
+            style="@style/version_info_dialog_item_rl"
+             >
+
+            <TextView
+                android:id="@+id/tv_dialog_title_app"
+                style="@style/version_info_dialog_tv_title"
+                android:text="@string/machine_ver_info_title_app"
+                 />
+            <TextView
+                android:id="@+id/tv_dialog_content_app"
+                style="@style/version_info_dialog_tv_content"
+                 />
+        </RelativeLayout>
+        <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"
+            android:background="@color/color_dialog_divider_gray"
+            ></RelativeLayout>
+        <RelativeLayout
+            style="@style/version_info_dialog_item_rl"
+             >
+
+            <TextView
+                android:id="@+id/tv_dialog_title_gateway"
+                style="@style/version_info_dialog_tv_title"
+                android:text="@string/machine_ver_info_title_gateway"
+                 />
+            <TextView
+                android:id="@+id/tv_dialog_content_gateway"
+                style="@style/version_info_dialog_tv_content"
+                 />
+        </RelativeLayout>
+        <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"
+            android:background="@color/color_dialog_divider_gray"
+            ></RelativeLayout>
+        <RelativeLayout
+            style="@style/version_info_dialog_item_rl"
+             >
+
+            <TextView
+                android:id="@+id/tv_dialog_title_master"
+                style="@style/version_info_dialog_tv_title"
+                android:text="@string/machine_ver_info_title_master"
+                 />
+            <TextView
+                android:id="@+id/tv_dialog_content_master"
+                style="@style/version_info_dialog_tv_content"
+                 />
+        </RelativeLayout>
+        <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"
+            android:background="@color/color_dialog_divider_gray"
+            ></RelativeLayout>
+        <RelativeLayout
+            style="@style/version_info_dialog_item_rl"
+             >
+
+            <TextView
+                android:id="@+id/tv_dialog_title_slave1"
+                style="@style/version_info_dialog_tv_title"
+                android:text="@string/machine_ver_info_title_slave1"
+                 />
+            <TextView
+                android:id="@+id/tv_dialog_content_slave1"
+                style="@style/version_info_dialog_tv_content"
+                 />
+        </RelativeLayout>
+        <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"
+            android:background="@color/color_dialog_divider_gray"
+            ></RelativeLayout>
+        <RelativeLayout
+            style="@style/version_info_dialog_item_rl"
+             >
+
+            <TextView
+                android:id="@+id/tv_dialog_title_slave2"
+                style="@style/version_info_dialog_tv_title"
+                android:text="@string/machine_ver_info_title_slave2"
+                 />
+            <TextView
+                android:id="@+id/tv_dialog_content_slave2"
+                style="@style/version_info_dialog_tv_content"
+                 />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

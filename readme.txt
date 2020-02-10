@@ -1,0 +1,10 @@
+這份code只有有關front-end的處理
+以及程式撰寫風格 會選擇這份code是因為這份專案大部分是獨立完成
+且只是一個單純介面程式
+已移除掉大部分與view無關的作業
+關於View的處理大多集中在fragment(包含所謂View和Controller部分)
+至於所有資料處理的工作主要會放在Activity和Service中
+其餘根據功能分散在其他package
+
+res的layout資料夾內有兩三種解決畫面破碎化的應對方式
+style則是由於本專案畫面一致性高因此有用到view的屬性繼承

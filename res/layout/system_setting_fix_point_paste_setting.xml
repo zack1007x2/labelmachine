@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+    <RelativeLayout
+        android:id="@+id/rl_head_declare_title_fix_point_paste"
+        android:layout_width="match_parent"
+        app:layout_heightPercent="20%" 
+        >
+
+        <TextView
+            android:id="@+id/tv_head_declare_title_fix_point_paste"
+            style="@style/table_declare_title_textview_title"
+            android:text="@string/system_setting_head_declare_title_fix_point_paste" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_pwean"
+        android:layout_width="match_parent"
+        android:layout_below="@id/rl_head_declare_title_fix_point_paste"
+        app:layout_heightPercent="20%" >
+
+        <TextView
+            android:id="@+id/tv_title_pwean"
+            style="@style/table_item_textview_title"
+            android:text="@string/system_setting_item_title_pwean" />
+
+        <ToggleButton
+            android:id="@+id/toggle_pwean"
+            style="@style/table_item_toggle_normal"
+            android:layout_alignBaseline="@+id/tv_title_pwean"
+            android:layout_toEndOf="@+id/tv_title_pwean"
+            android:layout_toRightOf="@+id/tv_title_pwean"
+            android:textOn="@string/common_switch_en_on"
+            android:textOff="@string/common_switch_en_off"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_mode"
+        android:layout_width="match_parent"
+        android:layout_below="@id/rl_pwean"
+        app:layout_heightPercent="20%" >
+
+        <TextView
+            android:id="@+id/tv_title_mode"
+            style="@style/table_item_textview_title"
+            android:text="@string/system_setting_item_title_mode" />
+
+        
+        <Button
+            android:id="@+id/btn_mode"
+            style="@style/table_item_btn_normal"
+            android:layout_alignBaseline="@+id/tv_title_mode"
+            android:layout_toEndOf="@+id/tv_title_mode"
+            android:layout_toRightOf="@+id/tv_title_mode"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_visd"
+        android:layout_width="match_parent"
+        android:layout_below="@id/rl_mode"
+        app:layout_heightPercent="20%" >
+
+        <TextView
+            android:id="@+id/tv_title_visd"
+            style="@style/table_item_textview_title"
+            android:text="@string/system_setting_item_title_visd" />
+
+        <EditText
+            android:id="@+id/et_visd"
+            style="@style/table_item_edittext_normal"
+            android:layout_alignBaseline="@+id/tv_title_visd"
+            android:layout_toEndOf="@+id/tv_title_visd"
+            android:layout_toRightOf="@+id/tv_title_visd" 
+            android:inputType="number"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_vied"
+        android:layout_width="match_parent"
+        android:layout_below="@id/rl_visd"
+        app:layout_heightPercent="20%" >
+
+        <TextView
+            android:id="@+id/tv_title_vied"
+            style="@style/table_item_textview_title"
+            android:text="@string/system_setting_item_title_vied" />
+
+        <EditText
+            android:id="@+id/et_title_vied"
+            style="@style/table_item_edittext_normal"
+            android:layout_alignBaseline="@+id/tv_title_vied"
+            android:layout_toEndOf="@+id/tv_title_vied"
+            android:layout_toRightOf="@+id/tv_title_vied"
+            android:inputType="number"
+             />
+    </RelativeLayout>
+
+</android.support.percent.PercentRelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_white"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_head_declare_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="33.3%" >
+
+        <TextView
+            android:id="@+id/tv_head_declare_title"
+            style="@style/engineer_table_declare_title_textview_title"
+            android:text="@string/engineer_param_setting_head_declare_title_encoder_resolution"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout 
+        android:id="@+id/rl_wecd"
+        android:layout_below="@id/rl_head_declare_title"
+        style="@style/tag_setting_main_table_item_layout"
+        app:layout_heightPercent="33.3%"  >
+
+        <TextView
+            android:id="@+id/tv_title_wecd"
+            style="@style/table_item_textview_title"
+            android:text="@string/engineer_param_setting_title_wecd" />
+
+        <EditText
+            android:id="@+id/et_title_wecd"
+            style="@style/engineer_table_table_item_edittext"
+            android:layout_toEndOf="@+id/tv_title_wecd"
+            android:layout_toRightOf="@+id/tv_title_wecd" />
+    </RelativeLayout>
+
+    <RelativeLayout 
+        android:id="@+id/rl_ecd"
+        android:layout_below="@id/rl_wecd"
+        style="@style/tag_setting_main_table_item_layout"
+        app:layout_heightPercent="33.3%"  >
+
+        <TextView
+            android:id="@+id/tv_title_ecd"
+            style="@style/table_item_textview_title"
+            android:text="@string/engineer_param_setting_title_ecd" />
+
+        <EditText
+            android:id="@+id/et_title_ecd"
+            style="@style/engineer_table_table_item_edittext"
+            android:layout_toEndOf="@+id/tv_title_ecd"
+            android:layout_toRightOf="@+id/tv_title_ecd" />
+    </RelativeLayout>
+
+</android.support.percent.PercentRelativeLayout>

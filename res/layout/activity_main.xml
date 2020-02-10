@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contentView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true" >
+
+    <RelativeLayout
+        android:id="@+id/main_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/main_bgd_gray" >
+
+        <include
+            android:id="@+id/main_header"
+            layout="@layout/header_activity_main" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/main_header"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/ll_side"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/size_10"
+                android:layout_marginEnd="@dimen/size_5"
+                android:layout_marginRight="@dimen/size_5"
+                android:layout_marginStart="@dimen/size_15"
+                android:layout_marginLeft="@dimen/size_15"
+                android:layout_marginTop="@dimen/size_10"
+                android:layout_weight="3"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/ll_side_menu_upper_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <android.support.percent.PercentRelativeLayout
+                        android:id="@+id/btn_main_side_auto_check"
+                        style="@style/main_side_button_layout"
+                        android:background="@drawable/main_side_head_button_selector" >
+
+                        <ImageView
+                            android:id="@+id/img_side_icon_check"
+                            style="@style/main_side_button_icon"
+                            app:layout_aspectRatio="100%"
+                            app:layout_widthPercent="25%"
+                            android:src="@drawable/icon_check" />
+
+                        <TextView
+                            android:id="@+id/text_side_text_auto_check"
+                            style="@style/main_side_button_text"
+                            android:layout_toEndOf="@id/img_side_icon_check"
+                            android:layout_toRightOf="@id/img_side_icon_check"
+                            android:text="@string/main_side_text_auto_check" />
+                    </android.support.percent.PercentRelativeLayout>
+
+                    <android.support.percent.PercentRelativeLayout
+                        android:id="@+id/btn_main_side_load_memo"
+                        style="@style/main_side_button_layout"
+                        android:background="@drawable/main_side_body_button_selector" >
+
+                        <ImageView
+                            android:id="@+id/img_side_icon_load_memo"
+                            style="@style/main_side_button_icon"
+                            app:layout_aspectRatio="100%"
+                            app:layout_widthPercent="25%"
+                            android:src="@drawable/icon_loadmemo" />
+
+                        <TextView
+                            android:id="@+id/text_side_text_load_memo"
+                            style="@style/main_side_button_text"
+                            android:layout_toEndOf="@id/img_side_icon_load_memo"
+                            android:layout_toRightOf="@id/img_side_icon_load_memo"
+                            android:text="@string/main_side_text_load_memo" />
+                    </android.support.percent.PercentRelativeLayout>
+
+                    <android.support.percent.PercentRelativeLayout
+                        android:id="@+id/btn_main_side_save_memo"
+                        style="@style/main_side_button_layout"
+                        android:background="@drawable/main_side_footer_button_selector" >
+
+                        <ImageView
+                            android:id="@+id/img_side_icon_save_memo"
+                            style="@style/main_side_button_icon"
+                            app:layout_aspectRatio="100%"
+                            app:layout_widthPercent="25%"
+                            android:src="@drawable/icon_savememo" />
+
+                        <TextView
+                            android:id="@+id/text_side_text_save_memo"
+                            style="@style/main_side_button_text"
+                            android:layout_toEndOf="@id/img_side_icon_save_memo"
+                            android:layout_toRightOf="@id/img_side_icon_save_memo"
+                            android:text="@string/main_side_text_save_memo" />
+                    </android.support.percent.PercentRelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_15"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_side_menu_lower_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignLeft="@+id/ll_side_menu_upper_area"
+                    android:layout_alignStart="@+id/ll_side_menu_upper_area"
+                    android:layout_below="@+id/ll_side_menu_upper_area"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <android.support.percent.PercentRelativeLayout
+                        android:id="@+id/btn_main_side_tag_setting"
+                        style="@style/main_side_button_layout"
+                        android:background="@drawable/main_side_head_button_selector" >
+
+                        <ImageView
+                            android:id="@+id/img_side_icon_tag_setting"
+                            style="@style/main_side_button_icon"
+                            app:layout_aspectRatio="100%"
+                            app:layout_widthPercent="25%"
+                            android:src="@drawable/icon_tag" />
+
+                        <TextView
+                            android:id="@+id/text_side_text_tag_setting"
+                            style="@style/main_side_button_text"
+                            android:layout_toEndOf="@id/img_side_icon_tag_setting"
+                            android:layout_toRightOf="@id/img_side_icon_tag_setting"
+                            android:text="@string/main_side_text_tag_setting" />
+                    </android.support.percent.PercentRelativeLayout>
+
+                    <android.support.percent.PercentRelativeLayout
+                        android:id="@+id/btn_main_side_print_setting"
+                        style="@style/main_side_button_layout"
+                        android:background="@drawable/main_side_body_button_selector" >
+
+                        <ImageView
+                            android:id="@+id/img_side_icon_print_setting"
+                            style="@style/main_side_button_icon"
+                            app:layout_aspectRatio="100%"
+                            app:layout_widthPercent="25%"
+                            android:src="@drawable/icon_print" />
+
+                        <TextView
+                            android:id="@+id/text_side_text_print_setting"
+                            style="@style/main_side_button_text"
+                            android:layout_toEndOf="@id/img_side_icon_print_setting"
+                            android:layout_toRightOf="@id/img_side_icon_print_setting"
+                            android:text="@string/main_side_text_print_setting" />
+                    </android.support.percent.PercentRelativeLayout>
+
+                    <android.support.percent.PercentRelativeLayout
+                        android:id="@+id/btn_main_side_system_setting"
+                        style="@style/main_side_button_layout"
+                        android:background="@drawable/main_side_footer_button_selector" >
+
+                        <ImageView
+                            android:id="@+id/img_side_icon_system_setting"
+                            style="@style/main_side_button_icon"
+                            app:layout_aspectRatio="100%"
+                            app:layout_widthPercent="25%"
+                            android:src="@drawable/icon_system" />
+
+                        <TextView
+                            android:id="@+id/text_side_text_system_setting"
+                            style="@style/main_side_button_text"
+                            android:layout_toEndOf="@id/img_side_icon_system_setting"
+                            android:layout_toRightOf="@id/img_side_icon_system_setting"
+                            android:text="@string/main_side_text_system_setting" />
+                    </android.support.percent.PercentRelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/size_10"
+                android:layout_weight="1"
+                >
+
+                <include
+                    android:id="@+id/main_monitor_panel"
+                    layout="@layout/main_monitor_panel" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <View 
+        android:id="@+id/cover_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</FrameLayout>

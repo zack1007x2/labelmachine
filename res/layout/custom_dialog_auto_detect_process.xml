@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_auto_process_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/size_40"
+    android:layout_marginRight="@dimen/size_40"
+    android:background="@android:color/white" >
+
+    <RelativeLayout
+        android:id="@+id/RLHeader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_50"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip" >
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/dialog_auto_process_title"
+            android:textColor="@color/color_dialog_title_text_green"
+            android:layout_marginLeft="@dimen/size_20"
+            android:layout_marginStart="@dimen/size_20"
+            android:textSize="@dimen/text_size_s" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/title_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"
+        android:layout_below="@id/RLHeader"
+        android:background="@color/color_dialog_title_text_green" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:padding="@dimen/size_20"
+        android:layout_below="@id/title_divider" >
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/common_custo_dialog_text"/>
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0"
+            android:layout_alignLeft="@+id/tvMessage"
+            android:layout_alignStart="@+id/tvMessage"
+            android:layout_marginTop="@dimen/size_10"
+            android:layout_below="@+id/tvMessage" >
+
+            <TableRow
+                android:id="@+id/optionalRow1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                 >
+                <TextView android:id="@+id/optionalRow1_title"
+                    style="@style/common_custo_dialog_text"/>
+                <TextView android:id="@+id/optionalRow1_value"
+                    style="@style/common_custo_dialog_text"
+                    android:paddingRight="@dimen/size_10"
+                    android:paddingEnd="@dimen/size_10"/>
+                <TextView android:id="@+id/optionalRow1_unit" 
+                    style="@style/common_custo_dialog_text"
+                    android:text="@string/dialog_auto_process_unit"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/optionalRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:visibility="gone">
+                <TextView android:id="@+id/optionalRow2_title"
+                    style="@style/common_custo_dialog_text"/>
+                <TextView android:id="@+id/optionalRow2_value"
+                    style="@style/common_custo_dialog_text"/>
+                <TextView android:id="@+id/optionalRow2_unit"
+                    style="@style/common_custo_dialog_text"
+                    android:text="@string/dialog_auto_process_unit"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/optionalRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" 
+                >
+                <TextView android:id="@+id/optionalRow3_title"
+                    style="@style/common_custo_dialog_text"/>
+                <TextView android:id="@+id/optionalRow3_value"
+                    style="@style/common_custo_dialog_text"/>
+                <TextView android:id="@+id/optionalRow3_unit"
+                    style="@style/common_custo_dialog_text"
+                    android:text="@string/dialog_auto_process_unit"/>
+            </TableRow>
+        </TableLayout>
+       
+    </RelativeLayout>
+
+</RelativeLayout>

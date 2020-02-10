@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_50"
+        android:background="@drawable/title_bar_s"
+        android:id="@+id/rl_fragment_header"
+        >
+
+        <TextView
+            android:id="@+id/tv_header_title"
+            style="@style/header_fragment_common_title_center"
+            />
+
+        <RelativeLayout
+            android:id="@+id/btn_header_back"
+            style="@style/header_fragment_common_rl_icon_left">
+            <ImageView
+                style="@style/header_fragment_common_btn_icon_left"/>
+        </RelativeLayout>
+        
+        
+        <Button
+            android:id="@+id/btn_header_secret"
+            android:background="@android:color/transparent"
+            android:layout_width="@dimen/size_150"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:enabled="false"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/btn_header_io"
+            android:background="@android:color/transparent"
+            android:layout_width="@dimen/size_100"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:enabled="false"
+            android:visibility="invisible"
+            android:paddingLeft="@dimen/size_30"
+            android:paddingRight="@dimen/size_30"
+            android:paddingTop="@dimen/size_2"
+            android:paddingBottom="@dimen/size_2"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_white"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_head_declare_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="33.3%" >
+
+        <TextView
+            android:id="@+id/tv_head_declare_title"
+            style="@style/engineer_table_declare_title_textview_title"
+            android:text="@string/engineer_param_setting_head_declare_title_option"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout 
+        android:id="@+id/rl_pwean"
+        android:layout_below="@id/rl_head_declare_title"
+        style="@style/tag_setting_main_table_item_layout"
+        app:layout_heightPercent="33.3%"  >
+
+        <TextView
+            android:id="@+id/tv_title_pwean"
+            style="@style/table_item_textview_title"
+            android:text="@string/engineer_param_setting_title_pwean" />
+
+        <Switch
+            android:id="@+id/switch_pwean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/size_40"
+            android:layout_marginEnd="@dimen/size_40"
+            android:textOn="@string/common_switch_en_on"
+            android:textOff="@string/common_switch_en_off"
+            android:switchMinWidth="@dimen/size_70"
+            android:thumbTextPadding="@dimen/size_20"
+            android:track="@drawable/switch_track"
+            android:switchTextAppearance="@style/switch_text"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout 
+        android:id="@+id/rl_roolen"
+        android:layout_below="@id/rl_pwean"
+        style="@style/tag_setting_main_table_item_layout"
+        app:layout_heightPercent="33.3%"  >
+
+        <TextView
+            android:id="@+id/tv_title_roolen"
+            style="@style/table_item_textview_title"
+            android:text="@string/engineer_param_setting_title_roolen" />
+
+        <Switch
+            android:id="@+id/switch_roolen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/size_40"
+            android:layout_marginEnd="@dimen/size_40"
+            android:textOn="@string/common_switch_en_on"
+            android:textOff="@string/common_switch_en_off"
+            android:switchMinWidth="@dimen/size_70"
+            android:thumbTextPadding="@dimen/size_20"
+            android:track="@drawable/switch_track"
+            android:switchTextAppearance="@style/switch_text"
+            />
+    </RelativeLayout>
+
+
+
+</android.support.percent.PercentRelativeLayout>

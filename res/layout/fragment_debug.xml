@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <include
+        android:id="@+id/fragment_header"
+        layout="@layout/header_engineering_fragment_common" />
+
+    <TextView
+        android:id="@+id/tv_addr_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_header"
+        android:layout_marginTop="@dimen/size_20"
+        style="@style/table_item_textview_title"
+        android:text="Addr : " />
+    
+    <EditText
+            android:id="@+id/et_addr"
+            style="@style/engineer_table_table_item_edittext"
+            android:layout_alignBaseline="@+id/tv_addr_title"
+            android:layout_toEndOf="@+id/tv_addr_title"
+            android:layout_toRightOf="@+id/tv_addr_title"
+            android:layout_width="@dimen/size_100"
+            android:digits="1234567890ABCDEF"
+            android:inputType="textCapCharacters"
+            android:maxLength="4"
+             />
+    
+    <TextView
+        android:id="@+id/tv_data_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_addr_title"
+        android:layout_marginTop="@dimen/size_20"
+        style="@style/table_item_textview_title"
+        android:text="Data : " />
+    
+    <EditText
+            android:id="@+id/et_data"
+            style="@style/engineer_table_table_item_edittext"
+            android:layout_alignBaseline="@+id/tv_data_title"
+            android:layout_toEndOf="@+id/tv_data_title"
+            android:layout_toRightOf="@+id/tv_data_title"
+            android:layout_width="@dimen/size_100"
+            android:digits="1234567890ABCDEF"
+            android:inputType="textCapCharacters"
+            android:maxLength="4"
+             />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_data_title"
+        android:layout_marginTop="@dimen/size_20"
+        style="@style/table_item_textview_title"/>
+    
+    <Button
+        android:id="@+id/btn_sent"
+        style="@style/engineering_menu_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_30"
+        android:layout_alignLeft="@+id/tv_data_title"
+        android:layout_alignRight="@+id/et_data"
+        android:layout_alignEnd="@id/et_data"
+        android:layout_alignStart="@+id/tv_data_title"
+        android:layout_below="@+id/tv_result"
+        android:text="Sent" />
+    
+    <RelativeLayout
+        android:id="@+id/rl_divider"
+        android:layout_width="@dimen/size_1"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@color/color_dialog_divider_gray"
+        android:layout_below="@id/fragment_header">
+    </RelativeLayout>
+    
+    <TextView
+        android:id="@+id/tv_param_setting_title"
+        style="@style/table_item_textview_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_addr_title"
+        android:layout_toRightOf="@id/rl_divider"
+        android:layout_toEndOf="@id/rl_divider"
+        android:layout_alignBaseline="@id/tv_addr_title"
+        android:text="Parameter Setting"/>
+    
+    <TextView
+        android:id="@+id/tv_cmd_delay_title"
+        style="@style/table_item_textview_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_data_title"
+        android:layout_toRightOf="@id/rl_divider"
+        android:layout_toEndOf="@id/rl_divider"
+        android:layout_alignBaseline="@id/tv_data_title"
+        android:text="Cmd Delay : " />
+
+    <EditText
+            android:id="@+id/et_delay"
+            style="@style/engineer_table_table_item_edittext"
+            android:layout_alignBaseline="@+id/tv_cmd_delay_title"
+            android:layout_toEndOf="@+id/tv_cmd_delay_title"
+            android:layout_toRightOf="@+id/tv_cmd_delay_title"
+            android:layout_width="@dimen/size_100"
+            android:digits="1234567890"
+            android:inputType="number"
+            android:maxLength="4"
+             />
+    
+
+</RelativeLayout>

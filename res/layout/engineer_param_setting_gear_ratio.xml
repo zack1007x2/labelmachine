@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_white"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_head_declare_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="25%" >
+
+        <TextView
+            android:id="@+id/tv_head_declare_title"
+            style="@style/engineer_table_declare_title_textview_title"
+            android:text="@string/engineer_param_setting_head_declare_title_gear_ratio"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout 
+        android:id="@+id/rl_rot1"
+        android:layout_below="@id/rl_head_declare_title"
+        style="@style/tag_setting_main_table_item_layout"
+        app:layout_heightPercent="25%"  >
+
+        <TextView
+            android:id="@+id/tv_title_rot1"
+            style="@style/table_item_textview_title"
+            android:text="@string/engineer_param_setting_title_rot1" />
+
+        <EditText
+            android:id="@+id/et_title_rot1"
+            style="@style/engineer_table_table_item_edittext"
+            android:layout_toEndOf="@+id/tv_title_rot1"
+            android:layout_toRightOf="@+id/tv_title_rot1" />
+    </RelativeLayout>
+
+    <RelativeLayout 
+        android:id="@+id/rl_rot2"
+        android:layout_below="@id/rl_rot1"
+        style="@style/tag_setting_main_table_item_layout"
+        app:layout_heightPercent="25%"  >
+
+        <TextView
+            android:id="@+id/tv_title_rot2"
+            style="@style/table_item_textview_title"
+            android:text="@string/engineer_param_setting_title_rot2" />
+
+        <EditText
+            android:id="@+id/et_title_rot2"
+            style="@style/engineer_table_table_item_edittext"
+            android:layout_toEndOf="@+id/tv_title_rot2"
+            android:layout_toRightOf="@+id/tv_title_rot2" />
+    </RelativeLayout>
+
+    <RelativeLayout  
+        android:id="@+id/rl_cd1"
+        android:layout_below="@id/rl_rot2"
+        style="@style/tag_setting_main_table_item_layout"
+        app:layout_heightPercent="25%"  >
+
+        <TextView
+            android:id="@+id/tv_title_cd1"
+            style="@style/table_item_textview_title"
+            android:text="@string/engineer_param_setting_title_cd1" />
+
+        <EditText
+            android:id="@+id/et_title_cd1"
+            style="@style/engineer_table_table_item_edittext"
+            android:layout_toEndOf="@+id/tv_title_cd1"
+            android:layout_toRightOf="@+id/tv_title_cd1" />
+    </RelativeLayout>
+
+
+</android.support.percent.PercentRelativeLayout>

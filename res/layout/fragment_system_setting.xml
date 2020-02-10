@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bgd_gray" 
+    android:focusableInTouchMode="true">
+
+    <include
+        android:id="@+id/fragment_header"
+        layout="@layout/header_fragment_common" />
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fragment_header"
+        android:layout_marginBottom="@dimen/size_25"
+        android:layout_marginLeft="@dimen/size_10"
+        android:layout_marginRight="@dimen/size_10"
+        android:layout_marginTop="@dimen/size_3"
+        android:background="@drawable/bg_white"
+        android:orientation="vertical"
+         >
+
+        <include
+            android:id="@+id/area_fix_point_paste_setting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_heightPercent="52%"
+            app:layout_widthPercent="50%"
+            android:layout_marginTop="@dimen/size_5"
+            layout="@layout/system_setting_fix_point_paste_setting" >
+        </include>
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"
+            android:layout_below="@id/area_fix_point_paste_setting"
+            android:background="@color/color_dialog_divider_gray"
+            ></RelativeLayout>
+        <RelativeLayout 
+            android:layout_width="@dimen/size_1"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/area_fix_point_paste_setting"
+            android:layout_toEndOf="@id/area_fix_point_paste_setting"
+            android:layout_above="@+id/bottom_divider"
+            android:background="@color/color_dialog_divider_gray"
+            ></RelativeLayout>
+
+        <include
+            android:id="@+id/area_detect_switch_setting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/area_fix_point_paste_setting"
+            android:layout_toRightOf="@id/area_fix_point_paste_setting"
+            app:layout_heightPercent="31%"
+            app:layout_widthPercent="50%"
+            android:layout_marginTop="@dimen/size_5"
+            layout="@layout/system_setting_detect_switch" >
+        </include>
+        
+        <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"
+            android:layout_below="@id/area_detect_switch_setting"
+            android:layout_toRightOf="@id/area_fix_point_paste_setting"
+            android:layout_toEndOf="@id/area_fix_point_paste_setting"
+            android:background="@color/color_dialog_divider_gray"
+            ></RelativeLayout>
+
+        <include
+            android:id="@+id/area_type_accelerate_setting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/area_detect_switch_setting"
+            android:layout_toEndOf="@id/area_fix_point_paste_setting"
+            android:layout_toRightOf="@id/area_fix_point_paste_setting"
+            app:layout_heightPercent="21%"
+            app:layout_widthPercent="50%"
+            layout="@layout/system_setting_type_accelerate_setting" >
+        </include>
+
+        <include
+            android:id="@+id/area_squeeze_bottle_setting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/area_fix_point_paste_setting"
+            app:layout_heightPercent="33%"
+            app:layout_widthPercent="50%"
+            layout="@layout/system_setting_squeeze_bottle_setting" >
+        </include>
+
+        <include
+            android:id="@+id/area_bottle_separate_speed_setting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/area_type_accelerate_setting"
+            android:layout_toEndOf="@id/area_squeeze_bottle_setting"
+            android:layout_toRightOf="@id/area_squeeze_bottle_setting"
+            app:layout_heightPercent="33%"
+            app:layout_widthPercent="50%"
+            layout="@layout/system_setting_separate_bottle_speed_setting" >
+        </include>
+
+        <RelativeLayout
+            android:id="@+id/bottom_divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1" 
+            android:layout_below="@id/area_squeeze_bottle_setting"
+            android:background="@color/color_dialog_divider_gray"
+            >
+        </RelativeLayout>
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/area_common_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_heightPercent="13%"
+            android:layout_below="@id/bottom_divider"
+             >
+
+            <LinearLayout
+                android:id="@+id/ll_lang_ver_center"
+                android:layout_width="@dimen/size_1"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal" >
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_title_language_select"
+                style="@style/table_item_textview_title"
+                android:text="@string/system_setting_item_title_language_select" />
+
+            <Button
+                android:id="@+id/btn_title_language_select"
+                style="@style/table_item_btn_normal"
+                android:layout_toEndOf="@+id/tv_title_language_select"
+                android:layout_toLeftOf="@id/ll_lang_ver_center"
+                android:layout_toRightOf="@+id/tv_title_language_select"
+                android:layout_toStartOf="@id/ll_lang_ver_center"
+                android:layout_marginTop="@dimen/size_5"
+                android:layout_marginBottom="@dimen/size_5" />
+
+            <TextView
+                android:id="@+id/tv_title_system_version"
+                style="@style/table_item_textview_title"
+                android:layout_width="@dimen/size_120"
+                android:layout_toEndOf="@id/ll_lang_ver_center"
+                android:layout_toRightOf="@id/ll_lang_ver_center"
+                android:text="@string/system_setting_item_title_system_version" />
+
+            <Button
+                android:id="@+id/btn_title_system_version"
+                style="@style/table_item_btn_normal"
+                android:layout_toEndOf="@+id/tv_title_system_version"
+                android:layout_toRightOf="@+id/tv_title_system_version" 
+                android:layout_marginTop="@dimen/size_5"
+                android:layout_marginBottom="@dimen/size_5"
+                android:text="@string/system_setting_btn_title_system_version"
+                android:layout_marginLeft="0dp"
+                android:layout_marginStart="0dp"
+                />
+        </android.support.percent.PercentRelativeLayout>
+    </android.support.percent.PercentRelativeLayout>
+
+</RelativeLayout>

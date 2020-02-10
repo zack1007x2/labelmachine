@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_white"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_head_declare_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="13.3%" >
+
+        <TextView
+            android:id="@+id/tv_head_declare_title"
+            style="@style/engineer_table_declare_title_textview_title"
+            android:text="@string/ccd_param_setting_head_declare_title_right"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout 
+        android:id="@+id/rl_print_time"
+        android:layout_below="@id/rl_head_declare_title"
+        style="@style/tag_setting_main_table_item_layout"
+        app:layout_heightPercent="13.3%"  >
+
+        <TextView
+            android:id="@+id/tv_title_print_time"
+            style="@style/table_item_textview_title"
+            android:text="@string/ccd_param_setting_title_dist1" />
+
+        <EditText
+            android:id="@+id/et_print_time_right"
+            style="@style/engineer_table_table_item_edittext"
+            android:layout_toEndOf="@+id/tv_title_print_time"
+            android:layout_toRightOf="@+id/tv_title_print_time" />
+    </RelativeLayout>
+
+    <RelativeLayout 
+        android:id="@+id/rl_print_speed"
+        android:layout_below="@id/rl_print_time"
+        style="@style/tag_setting_main_table_item_layout"
+        app:layout_heightPercent="13.3%"  >
+
+        <TextView
+            android:id="@+id/tv_title_print_speed"
+            style="@style/table_item_textview_title"
+            android:text="@string/ccd_param_setting_title_dist2" />
+
+        <EditText
+            android:id="@+id/et_title_print_speed_right"
+            style="@style/engineer_table_table_item_edittext"
+            android:layout_toEndOf="@+id/tv_title_print_speed"
+            android:layout_toRightOf="@+id/tv_title_print_speed" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_label_detect_right"
+        style="@style/tag_setting_main_table_item_layout"
+        android:layout_below="@id/rl_print_speed"
+        app:layout_heightPercent="13.3%" >
+
+        <TextView
+            android:id="@+id/tv_title_label_detect_right"
+            style="@style/table_item_textview_title"
+            android:text="@string/tag_setting_head_declare_title_label_detect" />
+
+        <EditText
+            android:id="@+id/et_label_detect_right"
+            style="@style/engineer_table_table_item_edittext"
+            android:layout_toEndOf="@+id/tv_title_label_detect_right"
+            android:layout_toRightOf="@+id/tv_title_label_detect_right"
+            android:inputType="number"
+            android:enabled="false"
+             />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/rl_label_detect_auto_right"
+        style="@style/tag_setting_main_table_item_layout"
+        android:layout_below="@id/rl_label_detect_right"
+        app:layout_heightPercent="13.3%" >
+        
+        <TextView
+            android:id="@+id/tv_title_label_detect_right"
+            style="@style/table_item_textview_title"
+            android:text="" />
+        <ToggleButton
+            android:id="@+id/toggle_label_detect_right"
+            style="@style/engineer_table_table_item_auto_toggle"
+            android:background="@drawable/common_auto_string_button_selector"
+             android:layout_toEndOf="@+id/tv_title_label_detect_right"
+            android:layout_toRightOf="@+id/tv_title_label_detect_right"
+             />
+    </RelativeLayout>
+</android.support.percent.PercentRelativeLayout>

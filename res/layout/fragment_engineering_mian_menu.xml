@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bgd_gray" >
+
+    <include
+        android:id="@+id/fragment_header"
+        layout="@layout/header_engineering_fragment_mainmenu" />
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fragment_header"
+        android:background="@drawable/bg_white"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/size_10" >
+        
+        <Button 
+            android:id="@+id/btn_engineering_menu_speed_param_setting"
+            app:layout_heightPercent="14%"
+            app:layout_widthPercent="45%"
+            style="@style/engineering_menu_btn"
+            android:layout_marginTop="@dimen/size_35"
+            android:text="@string/engineer_page_menu_title_speed_param"
+            />
+        <Button 
+            android:id="@+id/btn_engineering_menu_ccd_param_setting"
+            app:layout_heightPercent="14%"
+            app:layout_widthPercent="45%"
+            style="@style/engineering_menu_btn"
+            android:layout_below="@id/btn_engineering_menu_speed_param_setting"
+            android:text="@string/engineer_page_menu_title_ccd_param"
+            />
+        <Button 
+            android:id="@+id/btn_engineering_menu_engineering_param_setting"
+            app:layout_heightPercent="14%"
+            app:layout_widthPercent="45%"
+            style="@style/engineering_menu_btn"
+            android:layout_below="@id/btn_engineering_menu_ccd_param_setting"
+            android:text="@string/engineer_page_menu_title_engineering_param"
+            />
+        <Button 
+            android:id="@+id/btn_engineering_menu_version_and_machine_info"
+            app:layout_heightPercent="14%"
+            app:layout_widthPercent="45%"
+            style="@style/engineering_menu_btn"
+            android:layout_below="@id/btn_engineering_menu_engineering_param_setting"
+            android:text="@string/engineer_page_menu_title_ver_and_machine"
+            />
+
+        <Button
+            android:id="@+id/btn_debug"
+            android:layout_alignBottom="@+id/btn_engineering_menu_version_and_machine_info"
+            android:layout_alignTop="@+id/btn_engineering_menu_speed_param_setting"
+            android:layout_marginLeft="@dimen/size_50"
+            android:layout_marginStart="@dimen/size_50"
+            android:layout_toRightOf="@+id/btn_engineering_menu_speed_param_setting"
+            android:layout_toEndOf="@+id/btn_engineering_menu_speed_param_setting"
+            android:text="DEBUG"
+            style="@style/engineering_menu_btn"
+            android:layout_marginTop="0dp"
+            app:layout_widthPercent="10%"
+             />
+
+        <ToggleButton
+            android:id="@+id/btn_label_test"
+            style="@style/engineering_menu_btn"
+            app:layout_widthPercent="20%"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/size_35"
+            android:layout_marginLeft="@dimen/size_20"
+            android:layout_marginStart="@dimen/size_20"
+            android:layout_alignBottom="@id/btn_engineering_menu_ccd_param_setting"
+            android:textOn="@string/engineer_page_menu_title_label_test_on"
+            android:textOff="@string/engineer_page_menu_title_label_test_off" 
+            android:background="@drawable/engineer_toggle_button_selector"/>
+
+        <ToggleButton
+            android:id="@+id/btn_extension_test"
+            style="@style/engineering_menu_btn"
+            app:layout_widthPercent="20%"
+            android:textOn="@string/engineer_page_menu_title_extension_test_on"
+            android:textOff="@string/engineer_page_menu_title_extension_test_off"
+            android:layout_alignBottom="@id/btn_engineering_menu_version_and_machine_info"
+            android:layout_below="@id/btn_label_test"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="@dimen/size_20"
+            android:layout_marginStart="@dimen/size_20"
+            android:background="@drawable/engineer_toggle_button_selector"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bgd_gray"
+    android:orientation="vertical" 
+    android:focusableInTouchMode="true">
+
+    <include
+        android:id="@+id/fragment_header"
+        layout="@layout/header_engineering_fragment_common" />
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fragment_header"
+        android:layout_margin="@dimen/size_10"
+        android:background="@android:color/transparent"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/area_wheel_diameter"
+            app:layout_heightPercent="56%"
+            app:layout_widthPercent="49%"
+            layout="@layout/engineer_param_setting_wheel_diameter" />
+
+        <include
+            android:id="@+id/area_gear_ratio"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            app:layout_heightPercent="56%"
+            app:layout_widthPercent="49%"
+            layout="@layout/engineer_param_setting_gear_ratio" />
+
+        <include
+            android:id="@+id/area_encoder_resolution"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            app:layout_heightPercent="42%"
+            app:layout_widthPercent="49%"
+            layout="@layout/engineer_param_setting_encoder_resolution" />
+
+        <include
+            android:id="@+id/area_option"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            app:layout_heightPercent="42%"
+            app:layout_widthPercent="49%"
+            layout="@layout/engineer_param_setting_option" />
+    </android.support.percent.PercentRelativeLayout>
+
+</RelativeLayout>

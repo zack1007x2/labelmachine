@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bgd_gray"
+    android:focusableInTouchMode="true" >
+
+    <include
+        android:id="@+id/fragment_header"
+        layout="@layout/header_fragment_common" />
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/main_frame_table"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fragment_header"
+        android:layout_margin="@dimen/size_10"
+        android:background="@drawable/bg_white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl_botdiameter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_heightPercent="12.5%" >
+
+            <EditText
+                android:id="@+id/et_input_botdiameter"
+                android:layout_width="@dimen/size_180"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/size_20"
+                android:layout_marginStart="@dimen/size_20"
+                android:background="@drawable/edittext_input_bgd_selector"
+                android:gravity="center"
+                android:textColor="@drawable/common_input_text_selector"
+                android:textSize="@dimen/text_size_s"
+                android:inputType="numberDecimal"
+                android:imeOptions="actionDone"
+                 />
+
+            <TextView
+                android:id="@+id/tv_title_botdiameter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/et_input_botdiameter"
+                android:layout_toStartOf="@id/et_input_botdiameter"
+                android:text="@string/tag_setting_head_declare_title_target_length"
+                android:textSize="@dimen/text_size_s" />
+
+            <ToggleButton
+                android:id="@+id/toggle_botdiameter"
+                style="@style/tag_setting_main_table_item_auto_toggle_btn"
+                android:layout_alignBottom="@id/et_input_botdiameter"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentRight="false"
+                android:layout_alignTop="@id/et_input_botdiameter"
+                android:layout_marginLeft="@dimen/size_10"
+                android:layout_marginStart="@dimen/size_10"
+                android:layout_toEndOf="@id/et_input_botdiameter"
+                android:layout_toRightOf="@id/et_input_botdiameter" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/rl_divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1"
+            android:layout_below="@id/rl_botdiameter"
+            android:background="@color/color_dialog_divider_gray"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/rl_divider"
+            app:layout_heightPercent="87.5%"
+            app:layout_widthPercent="50%"
+            android:orientation="vertical" >
+
+            <include
+                android:id="@+id/prl_left_main_table"
+                layout="@layout/label_setting_main_table_left" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/size_1"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_divider"
+            android:layout_centerHorizontal="true"
+            android:background="@color/color_dialog_divider_gray"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/rl_divider"
+            app:layout_heightPercent="87.5%"
+            app:layout_widthPercent="50%"
+            android:orientation="vertical" >
+
+            <include
+                android:id="@+id/prl_right_main_table"
+                layout="@layout/label_setting_main_table_right" />
+        </LinearLayout>
+    </android.support.percent.PercentRelativeLayout>
+
+</RelativeLayout>

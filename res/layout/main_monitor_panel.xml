@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_white"
+    android:orientation="vertical" >
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/main_top_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:layout_heightPercent="70%" >
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/main_top_panel_1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            app:layout_widthPercent="33.2%"
+            android:focusable="true"
+            android:focusableInTouchMode="true" >
+
+            <ImageView
+                android:id="@+id/img_produce_amount"
+                style="@style/main_monitor_status_table_image"
+                android:layout_alignParentTop="true"
+                app:layout_heightPercent="65%"
+                android:src="@drawable/icon_amount" />
+
+            <TextView
+                android:id="@+id/tv_produce_amount_title"
+                style="@style/main_monitor_status_table_text_title"
+                android:layout_below="@id/img_produce_amount"
+                app:layout_heightPercent="10%"
+                android:text="@string/main_monitor_table_title_produce_amount" />
+
+            <EditText
+                android:id="@+id/et_produce_amount"
+                style="@style/main_monitor_status_table_edittext"
+                android:layout_below="@id/tv_produce_amount_title"
+                app:layout_heightPercent="13%"
+                android:maxLength="7" />
+
+            <TextView
+                android:id="@+id/tv_produce_amount"
+                style="@style/main_monitor_status_table_text_content"
+                android:layout_below="@id/tv_produce_amount_title"
+                app:layout_heightPercent="13%" />
+        </android.support.percent.PercentRelativeLayout>
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/divider_1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_60"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/size_10"
+            android:layout_toEndOf="@id/main_top_panel_1"
+            android:layout_toRightOf="@id/main_top_panel_1"
+            app:layout_widthPercent="0.2%"
+            android:background="@color/color_dialog_divider_gray" >
+        </android.support.percent.PercentRelativeLayout>
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/main_top_panel_2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/divider_1"
+            android:layout_toRightOf="@id/divider_1"
+            app:layout_widthPercent="33.2%" >
+
+            <ImageView
+                android:id="@+id/img_label_remained"
+                style="@style/main_monitor_status_table_image"
+                android:layout_alignParentTop="true"
+                app:layout_heightPercent="65%"
+                android:src="@drawable/icon_surplus" />
+
+            <TextView
+                android:id="@+id/tv_label_remained_title"
+                style="@style/main_monitor_status_table_text_title"
+                android:layout_below="@id/img_label_remained"
+                app:layout_heightPercent="10%"
+                android:text="@string/main_monitor_table_title_label_remained" />
+
+            <EditText
+                android:id="@+id/et_label_remained"
+                style="@style/main_monitor_status_table_edittext"
+                android:layout_below="@id/tv_label_remained_title"
+                app:layout_heightPercent="13%"
+                android:maxLength="7" />
+
+            <TextView
+                android:id="@+id/tv_label_remained"
+                style="@style/main_monitor_status_table_text_content"
+                android:layout_below="@id/tv_label_remained_title"
+                app:layout_heightPercent="13%" />
+        </android.support.percent.PercentRelativeLayout>
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/divider_2"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_60"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/size_10"
+            android:layout_toEndOf="@id/main_top_panel_2"
+            android:layout_toRightOf="@id/main_top_panel_2"
+            app:layout_widthPercent="0.2%"
+            android:background="@color/color_dialog_divider_gray" >
+        </android.support.percent.PercentRelativeLayout>
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/main_top_panel_3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/divider_2"
+            android:layout_toRightOf="@id/divider_2"
+            app:layout_widthPercent="33.2%" >
+
+            <ImageView
+                android:id="@+id/img_produce_speed"
+                style="@style/main_monitor_status_table_image"
+                android:layout_alignParentTop="true"
+                app:layout_heightPercent="65%"
+                android:src="@drawable/icon_speed" />
+
+            <TextView
+                android:id="@+id/tv_produce_speed_title"
+                style="@style/main_monitor_status_table_text_title"
+                android:layout_below="@id/img_produce_speed"
+                app:layout_heightPercent="10%"
+                android:text="@string/main_monitor_table_title_produce_speed" />
+
+            <EditText
+                android:id="@+id/et_produce_speed"
+                style="@style/main_monitor_status_table_edittext"
+                android:layout_below="@id/tv_produce_speed_title"
+                app:layout_heightPercent="13%"
+                android:maxLength="3" />
+
+            <TextView
+                android:id="@+id/tv_produce_speed"
+                style="@style/main_monitor_status_table_text_content"
+                android:layout_below="@id/tv_produce_speed_title"
+                app:layout_heightPercent="13%" />
+
+            <ImageView
+                android:id="@+id/btn_speed_plus"
+                style="@style/main_monitor_speed_btn"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:paddingTop="@dimen/size_10"
+                android:paddingBottom="@dimen/size_10"
+                android:paddingLeft="@dimen/size_17"
+                android:paddingStart="@dimen/size_17"
+                android:paddingRight="@dimen/size_3"
+                android:paddingEnd="@dimen/size_3"
+                android:src="@drawable/main_monitor_speed_plus_button_selector" />
+
+            <ImageView
+                android:id="@+id/btn_speed_minus"
+                style="@style/main_monitor_speed_btn"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:paddingTop="@dimen/size_10"
+                android:paddingBottom="@dimen/size_10"
+                android:paddingLeft="@dimen/size_3"
+                android:paddingStart="@dimen/size_3"
+                android:paddingRight="@dimen/size_17"
+                android:paddingEnd="@dimen/size_17"
+                android:src="@drawable/main_monitor_speed_minus_button_selector" />
+        </android.support.percent.PercentRelativeLayout>
+    </android.support.percent.PercentRelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_top_panel"
+        app:layout_heightPercent="30%"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <ToggleButton
+            android:id="@+id/toggle_separate_motion_delay"
+            style="@style/system_setting_main_table_item_toggle_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_45"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:textOff="@string/system_setting_item_title_bot_separate_off"
+            android:textOn="@string/system_setting_item_title_bot_separate_on" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <endexcase.scanmachine.widget.MainMonitorButton
+            android:id="@+id/btn_activate"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_45"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:background="@drawable/main_monitor_start_button_selector"
+            android:text="@string/main_monitor_btn_start"
+            android:textColor="@android:color/white"
+            android:textOff="@string/main_monitor_btn_start"
+            android:textOn="@string/main_monitor_btn_stop"
+            android:textSize="@dimen/text_size_s"
+            android:textStyle="bold" >
+        </endexcase.scanmachine.widget.MainMonitorButton>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <endexcase.scanmachine.widget.MainMonitorButton
+            android:id="@+id/btn_inactivate"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_45"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:background="@drawable/main_monitor_stop_button_selector"
+            android:enabled="false"
+            android:text="@string/main_monitor_btn_stop"
+            android:textColor="@android:color/white"
+            android:textOff="@string/main_monitor_btn_start"
+            android:textOn="@string/main_monitor_btn_stop"
+            android:textSize="@dimen/text_size_s"
+            android:textStyle="bold" >
+        </endexcase.scanmachine.widget.MainMonitorButton>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.percent.PercentRelativeLayout>

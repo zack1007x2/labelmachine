@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout 
+        android:id="@+id/rl_max_spd"
+        app:layout_heightPercent="14.28%"
+        style="@style/tag_setting_main_table_item_layout" >
+
+        <TextView
+            android:id="@+id/tv_title_max_spd"
+            style="@style/table_item_textview_title"
+            android:text="@string/speed_param_setting_title_max_spd" />
+
+        <EditText
+            android:id="@+id/et_max_spd_right"
+            style="@style/engineer_table_table_item_edittext"
+            android:layout_alignBaseline="@+id/tv_title_max_spd"
+            android:layout_alignBottom="@+id/tv_title_max_spd"
+            android:layout_toEndOf="@+id/tv_title_max_spd"
+            android:layout_toRightOf="@+id/tv_title_max_spd"
+            android:inputType="numberDecimal"
+            android:imeOptions="actionDone"
+             />
+    </RelativeLayout>
+
+    <RelativeLayout 
+        android:id="@+id/rl_start_spd"
+        android:layout_below="@id/rl_max_spd"
+        app:layout_heightPercent="14.28%"
+        style="@style/tag_setting_main_table_item_layout" >
+        <TextView
+            android:id="@+id/tv_title_start_spd"
+            style="@style/table_item_textview_title"
+            android:text="@string/speed_param_setting_title_start_spd" />
+
+        <EditText
+            android:id="@+id/et_start_spd_right"
+            style="@style/engineer_table_table_item_edittext"
+            android:layout_alignBaseline="@+id/tv_title_start_spd"
+            android:layout_alignBottom="@+id/tv_title_start_spd"
+            android:layout_toEndOf="@+id/tv_title_start_spd"
+            android:layout_toRightOf="@+id/tv_title_start_spd"
+            android:inputType="numberDecimal"
+            android:imeOptions="actionDone"
+             />
+    </RelativeLayout>
+
+    <RelativeLayout 
+        android:id="@+id/rl_stop_spd"
+        android:layout_below="@id/rl_start_spd"
+        app:layout_heightPercent="14.28%"
+        style="@style/tag_setting_main_table_item_layout" >
+        <TextView
+            android:id="@+id/tv_title_stop_spd"
+            style="@style/table_item_textview_title"
+            android:text="@string/speed_param_setting_title_stop_spd" />
+
+        <EditText
+            android:id="@+id/et_stop_spd_right"
+            style="@style/engineer_table_table_item_edittext"
+            android:layout_alignBaseline="@+id/tv_title_stop_spd"
+            android:layout_alignBottom="@+id/tv_title_stop_spd"
+            android:layout_toEndOf="@+id/tv_title_stop_spd"
+            android:layout_toRightOf="@+id/tv_title_stop_spd"
+            android:inputType="numberDecimal"
+            android:imeOptions="actionDone"
+             />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_par_acc"
+        android:layout_below="@id/rl_stop_spd"
+        app:layout_heightPercent="14.28%"
+        style="@style/tag_setting_main_table_item_layout" >
+        <TextView
+            android:id="@+id/tv_title_par_acc"
+            style="@style/table_item_textview_title"
+            android:text="@string/speed_param_setting_title_par_acc" />
+
+        <EditText
+            android:id="@+id/et_par_acc_right"
+            style="@style/engineer_table_table_item_edittext"
+            android:layout_alignBaseline="@+id/tv_title_par_acc"
+            android:layout_alignBottom="@+id/tv_title_par_acc"
+            android:layout_toEndOf="@+id/tv_title_par_acc"
+            android:layout_toRightOf="@+id/tv_title_par_acc"
+            android:inputType="numberDecimal"
+            android:imeOptions="actionDone"
+             />
+    </RelativeLayout>
+
+    <RelativeLayout 
+        android:id="@+id/rl_step_acc"
+        android:layout_below="@id/rl_par_acc"
+        app:layout_heightPercent="14.28%"
+        style="@style/tag_setting_main_table_item_layout" >
+        <TextView
+            android:id="@+id/tv_title_step_acc"
+            style="@style/table_item_textview_title"
+            android:text="@string/speed_param_setting_title_step_acc" />
+
+        <EditText
+            android:id="@+id/et_step_acc_right"
+            style="@style/engineer_table_table_item_edittext"
+            android:layout_alignBaseline="@+id/tv_title_step_acc"
+            android:layout_alignBottom="@+id/tv_title_step_acc"
+            android:layout_toEndOf="@+id/tv_title_step_acc"
+            android:layout_toRightOf="@+id/tv_title_step_acc"
+            android:inputType="numberDecimal"
+            android:imeOptions="actionDone"
+             />
+    </RelativeLayout>
+
+    <RelativeLayout 
+        android:id="@+id/rl_par_dec"
+        android:layout_below="@id/rl_step_acc"
+        app:layout_heightPercent="14.28%"
+        style="@style/tag_setting_main_table_item_layout" >
+        <TextView
+            android:id="@+id/tv_title_par_dec"
+            style="@style/table_item_textview_title"
+            android:text="@string/speed_param_setting_title_par_dec" />
+
+        <EditText
+            android:id="@+id/et_par_dec_right"
+            style="@style/engineer_table_table_item_edittext"
+            android:layout_alignBaseline="@+id/tv_title_par_dec"
+            android:layout_alignBottom="@+id/tv_title_par_dec"
+            android:layout_toEndOf="@+id/tv_title_par_dec"
+            android:layout_toRightOf="@+id/tv_title_par_dec"
+            android:inputType="numberDecimal"
+            android:imeOptions="actionDone"
+             />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/rl_step_dec"
+        android:layout_below="@id/rl_par_dec"
+        style="@style/tag_setting_main_table_item_layout"
+        app:layout_heightPercent="14.28%">
+        <TextView
+            android:id="@+id/tv_title_step_dec"
+            style="@style/table_item_textview_title"
+            android:text="@string/speed_param_setting_title_step_dec" />
+
+        <EditText
+            android:id="@+id/et_step_dec_right"
+            style="@style/engineer_table_table_item_edittext"
+            android:layout_alignBaseline="@+id/tv_title_step_dec"
+            android:layout_alignBottom="@+id/tv_title_step_dec"
+            android:layout_toEndOf="@+id/tv_title_step_dec"
+            android:layout_toRightOf="@+id/tv_title_step_dec"
+            android:inputType="numberDecimal"
+            android:imeOptions="actionDone"
+             />
+    </RelativeLayout>
+</android.support.percent.PercentRelativeLayout>

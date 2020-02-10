@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_white"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_head_declare_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="33.33%" >
+
+        <TextView
+            android:id="@+id/tv_head_declare_title"
+            style="@style/engineer_table_declare_title_textview_title"
+            android:text="@string/machine_ver_info_head_declare_title_system_init"
+            />
+    </RelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/rl_init_system_param_only"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_head_declare_title"
+        app:layout_heightPercent="33.33%" >
+
+        <Button 
+            android:id="@+id/btn_init_system_param_only"
+            app:layout_widthPercent="80%"
+            app:layout_heightPercent="60%"
+            android:text="@string/machine_ver_info_title_init_system_param_only"
+            style="@style/machine_and_ver_btn"
+            />
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/rl_init_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/rl_init_system_param_only"
+        app:layout_heightPercent="33.33%" >
+
+        <Button 
+            android:id="@+id/btn_init_all"
+            app:layout_widthPercent="80%"
+            app:layout_heightPercent="60%"
+            android:text="@string/machine_ver_info_title_init_all"
+            style="@style/machine_and_ver_btn"
+            android:layout_alignParentTop="true"
+            />
+    </android.support.percent.PercentRelativeLayout>
+
+</android.support.percent.PercentRelativeLayout>
